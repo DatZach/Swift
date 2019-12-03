@@ -1,0 +1,108 @@
+Scene Data Format
+=================
+
+Revised: 11/19/13
+
+Overview
+--------
+
+	Scene data is stored inside of the game data which is automatically deserialized
+by the engine. This data is used by the engine to allow developers to quickly design
+worlds containing tilesets, entities and premapped collision maps.
+
+Version History
+---------------
+
+Version 3 [September 19th, 2013]:
+	- Fix TILE section
+
+Version 2 [October 16th, 2013]:
+	- Changed from "level" to "scene"
+	- Added default bg music
+
+Version 1 [September 19th, 2013]:
+	- Initial version
+
+Format
+------
+
+Magic		: SWFL
+Version		: 3
+
+<Header>
+ 0 1 Count {
+	 0 4 Section Tag
+	<Section>
+}
+
+Sections
+--------
+
+CNFG		Configuration
+ENTS		Entities
+BKGD		Background
+TILS		Tiles
+COLI		Collision Map
+
+Header
+------
+
+ 0 4 Magic
+ 4 2 Version
+
+Configuration
+-------------
+ 0 4 Width
+ 4 4 Height
+ 8 ? Length		{ String <Default BG Music> }
+
+Entities
+--------
+
+ 0 4 Count
+ For Count {
+	 0 4 Length		{ String <Tag> }
+	 0 4 Length		{ String <Entity> }
+	 0 4 X
+	 4 4 Y
+	 8 4 X Scale (float)
+	 C 4 Y Scale (float)
+	10 4 Color (RGBA)
+	14 2 Rotation		[ This needs to be a float ]
+ }
+
+Backgrounds
+-----------
+
+ 0 4 Background Color
+ 0 4 Length			{ String <Texture> }
+
+Tiles
+-----
+
+ 0 4 Count
+ For Count {
+	 0 4 Length		{ String <Texture> }
+	 0 2 Tile Width
+	 2 2 Tile Height
+	 4 4 Count
+
+	 For Count {
+	 	 0 2 X			[ In grid coords ]
+	 	 2 2 Y			[ In grid coords ]
+		 4 1 Tile X
+		 5 1 Tile Y
+	 }
+ }
+
+Collision Map
+-------------
+
+ 0 4 Count
+ For Count {
+ 	 0 4 Count
+	 For Count {
+		 0 4 X
+		 4 4 Y
+	 }
+ }

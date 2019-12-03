@@ -1,0 +1,60 @@
+{
+	/*
+	 *	Sounds section describes all sounds that will be
+	 *	automatically loaded by the engine during load time.
+	 *	Sound effects and music are lumped together into this
+	 *	section.
+	 *	How they are used is dependant on the code that uses them.
+	 *	Accessing these resources in code and be done like so:
+	 *		var bgMusic = Assets.Sounds["Music"];
+	 *		SoundManager.Play(bgMusic, true);
+	 *		SoundManager.Play("Music", true);
+	 *		var sfxHit = Assets.Sounds["SfxHit"];
+	 *		var inst = SoundManager.Play(sfxHit);
+	 *		var inst = SoundManager.Play("SfxHit");
+	 */
+	"Sounds" :
+	{
+		"Music" :
+		{
+			/*
+			 *	Filename is relative path to the associated file.
+			 *	Supported audio formats:
+			 *		MP3, OGG, FLAC, WAV, XM, MOD, S3M
+			 */
+			"filename" : "music.ogg",
+			
+			/*
+			 *	Mode defines how the sound should be played.
+			 *	File stream mode should be used for large audio
+			 *	files such as music. Memory stream mode should
+			 *	be used for small or frequently used sounds such
+			 *	as sound effects.
+			 *	Legal values:
+			 *		"file", "memory"
+			 *	Default: "memory"
+			 */
+			"mode" : "file",
+			 
+			 /*
+			  *	Sample Rate defines the number of samples to play over
+			  *	a set period of time.
+			  *	Default: 44100
+			  */
+			"samplerate" : 44100,
+			 
+			 /*
+			  *	Bit Rate defines the number of bits processed over a
+			  *	set period of time. Defined in kbps.
+			  *	Default: 192
+			  */
+			"bitrate" : 192
+		},
+		
+		"SfxHit" :
+		{
+			"filename" : "hit.wav",
+			"mode" : "memory"
+		}
+	 }
+}

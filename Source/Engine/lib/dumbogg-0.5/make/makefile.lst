@@ -1,0 +1,9 @@
+MODULES =                  \
+    ogg.c                  \
+
+
+LIB = dmogg
+LIB_DEBUG = dmogd
+
+EXAMPLES = playogg.c
+

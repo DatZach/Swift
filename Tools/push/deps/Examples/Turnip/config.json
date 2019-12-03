@@ -1,0 +1,1 @@
+{ "Configuration" : { "antialiasinglevel" : 0, "company" : "", "copyright" : "", "cursor" : true, "description" : "", "fullscreen" : false, "icon" : "", "incbuild" : true, "initialstate" : "Main", "product" : "", "sheetsize" : 2048, "size" : { "x" : 620, "y" : 413 }, "title" : "Lettuce Turnip the Beet - Swift Example", "trademark" : "", "version" : "1.0.0", "vsync" : true } }

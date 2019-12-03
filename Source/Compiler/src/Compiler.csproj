@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA3449CD-471E-423F-A8A3-8D4C974F0197}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Swift</RootNamespace>
+    <AssemblyName>Swift</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\windows\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Swift.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EmbeddedResource Include="Source\Json\EngineClasses.json" />
+    <EmbeddedResource Include="Source\Json\EngineBindings.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AssetException.cs" />
+    <Compile Include="Assets\Audio.cs" />
+    <Compile Include="Assets\Bytecode.cs" />
+    <Compile Include="Assets\Configuration.cs" />
+    <Compile Include="Assets\Drm.cs" />
+    <Compile Include="Assets\GameData.cs" />
+    <Compile Include="Assets\Scenes.cs" />
+    <Compile Include="Assets\Section.cs" />
+    <Compile Include="Assets\Sounds.cs" />
+    <Compile Include="Assets\Textures.cs" />
+    <Compile Include="Assets\TextureSheet.cs" />
+    <Compile Include="Assets\TextureSheets.cs" />
+    <Compile Include="CommandLine.cs" />
+    <Compile Include="Commands\CommandLineMethod.cs" />
+    <Compile Include="Commands\Compile.cs" />
+    <Compile Include="Commands\Create.cs" />
+    <Compile Include="Commands\Help.cs" />
+    <Compile Include="Commands\License.cs" />
+    <Compile Include="Commands\Platforms.cs" />
+    <Compile Include="Commands\Run.cs" />
+    <Compile Include="Commands\Update.cs" />
+    <Compile Include="Commands\Version.cs" />
+    <Compile Include="Json.cs" />
+    <Compile Include="License.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Project\ConfigurationProperties.cs" />
+    <Compile Include="Project\Font.cs" />
+    <Compile Include="Project\GameProject.cs" />
+    <Compile Include="Project\ProjectProperties.cs" />
+    <Compile Include="Project\Sound.cs" />
+    <Compile Include="Project\Texture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rot13.cs" />
+    <Compile Include="Source\Bytecode\Class.cs" />
+    <Compile Include="Source\Bytecode\Enumeration.cs" />
+    <Compile Include="Source\Bytecode\Field.cs" />
+    <Compile Include="Source\Bytecode\Instruction.cs" />
+    <Compile Include="Source\Compiler.Expressions.cs" />
+    <Compile Include="Source\Compiler.InlineClasses.cs" />
+    <Compile Include="Source\Compiler.Lookup.cs" />
+    <Compile Include="Source\Compiler.Main.cs" />
+    <Compile Include="Source\Compiler.Primary.cs" />
+    <Compile Include="Source\Compiler.Statements.cs" />
+    <Compile Include="Source\Compiler.TopLevel.Pass1.cs" />
+    <Compile Include="Source\Compiler.TopLevel.Pass0.cs" />
+    <Compile Include="Source\CompilerException.cs" />
+    <Compile Include="Source\Label.cs" />
+    <Compile Include="Source\Lexer\LexerException.cs" />
+    <Compile Include="Source\Lexer\Parser.cs" />
+    <Compile Include="Source\Lexer\Token.cs" />
+    <Compile Include="Source\Lexer\Tokenizer.cs" />
+    <Compile Include="Source\Lexer\TokenStream.cs" />
+    <Compile Include="Source\Bytecode\Method.cs" />
+    <Compile Include="Source\Bytecode\Variant.cs" />
+    <Compile Include="StringStream.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Vector2.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\project\windows\packages\Newtonsoft.Json.6.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>python ..\..\..\..\..\Tools\CompilerPreBuild.py $(ProjectDir)
+python ..\..\..\..\..\Tools\UpdateEngineBindings.py ..\..\..\..\Engine\src\stdlib\ ..\..\..\src\Source\Json\EngineBindings.json</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

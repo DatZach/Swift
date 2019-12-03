@@ -1,0 +1,33 @@
+entity Coin
+
+field double X
+field double Y
+field int Z
+field object Sprite
+
+method Create 0
+	push	0
+	getthis
+	setf	Z
+	
+	new		Sprite
+	getthis
+	setf	Sprite
+	
+	push	"Coin"
+	getthis
+	getf	Sprite
+	call	Constructor0
+	
+	/*
+	push	1.0
+	getthis
+	getf	Sprite
+	setf	FrameSpeed
+	
+	push	1
+	getthis
+	getf	Sprite
+	setf	Animated
+	*/
+end

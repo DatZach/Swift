@@ -1,0 +1,41 @@
+How to compile libogg and libvorbis under DJGPP:
+
+Note: these instructions are for compiling libogg v1.0 and libvorbis v1.0.
+They may or may not work properly for other versions.
+
+=====
+
+libogg:
+
+In your libogg distribution, open up the file /include/ogg/os_types.h, and
+near the end, right after the OS/2 GCC #elif, add the following:
+
+-----
+#elif defined (DJGPP)
+
+   /* DJGPP */
+   typedef short ogg_int16_t;
+   typedef int ogg_int32_t;
+   typedef unsigned int ogg_uint32_t;
+   typedef long long ogg_int64_t;
+-----
+
+Now save the file, and you can compile the lib with the batch file as
+instructed in howto.txt.
+
+=====
+
+libvorbis, libvorbisenc, libvorbisfile:
+
+Open up the file /lib/os.h, and near the end, right before the last
+#endif, add the following code:
+
+-----
+#ifdef DJGPP
+#  define rint(x)   (floor((x)+0.5f))
+#endif
+-----
+
+Now you can compile the source properly under DJGPP.
+
+-----

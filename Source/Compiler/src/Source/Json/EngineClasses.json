@@ -1,0 +1,527 @@
+[
+    {
+        "Name": "entity",
+        "Fields": [
+            {
+                "Name": "x",
+                "Visibility": "Public",
+                "Value": {
+                    "Type": "Double",
+                    "DoubleValue": 0
+                }
+            },
+            {
+                "Name": "y",
+                "Visibility": "Public",
+                "Value": {
+                    "Type": "Double",
+                    "DoubleValue": 0
+                }
+            },
+            {
+                "Name": "z",
+                "Visibility": "Public",
+                "Value": {
+                    "Type": "Int64",
+                    "IntValue": 0
+                }
+            },
+            {
+                "Name": "Sprite",
+                "Visibility": "Public",
+                "Value": {
+                    "Type": "Object",
+                    "ObjectName": "Sprite"
+                }
+            },
+			{
+				"Name": "__property_ParentState",
+				"Visibility": "Private",
+				"Value": {
+                    "Type": "Object",
+                    "ObjectName": "state"
+                }
+			}
+        ],
+        "Methods": [
+            {
+                "Name": "GetParentState",
+                "Visibility": "Protected",
+                "Arguments": []
+            },
+            {
+                "Name": "GetFromTag",
+                "Visibility": "Protected",
+                "Arguments": [ "value" ]
+            },
+            {
+                "Name": "GetCollidingFirst",
+                "Visibility": "Protected",
+                "Arguments": []
+            },
+			{
+				"Name": "__get_ParentState",
+				"Visibility": "Public",
+				"Arguments": [] 
+			}
+        ]
+    },
+    {
+        "Name": "state",
+        "Fields": [
+            {
+                "Name": "ClearColor",
+                "Visibility": "Public",
+                "Value": {
+                    "Type": "Object",
+                    "ObjectName": "Color"
+                }
+            },
+            {
+                "Name": "Active",
+                "Visibility": "Public",
+                "Value": {
+                    "Type": "Int64",
+                    "IntValue": true
+                }
+            }
+        ],
+        "Methods": [
+            {
+                "Name": "LoadScene",
+                "Visibility": "Public",
+                "Arguments": [ "value" ]
+            },
+            {
+                "Name": "TilePlaceFree",
+                "Visibility": "Public",
+                "Arguments": [ "x", "y" ]
+            },
+            {
+                "Name": "Remove",
+                "Visibility": "Public",
+                "Arguments": [ "value" ]
+            },
+            {
+                "Name": "RemoveByTag",
+                "Visibility": "Public",
+                "Arguments": [ "value" ]
+            },
+			{
+				"Name": "Add",
+				"Visibility": "Public",
+				"Arguments": [
+					"entity"
+				]
+			}
+        ]
+    },
+	{
+	  "Name": "__str",
+	  "Methods": [
+	    {
+		  "Name": "Length",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "Size",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+	    {
+		  "Name": "ToUpper",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "ToLower",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "SwapCase",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "SubString",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"index",
+			"count"
+		  ]
+		},
+		{
+		  "Name": "Insert",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"index",
+			"count"
+		  ]
+		},
+		{
+		  "Name": "Overwrite",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"index",
+			"count"
+		  ]
+		},
+		{
+		  "Name": "Remove",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"index",
+			"count"
+		  ]
+		},
+		{
+		  "Name": "Replace",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"old",
+			"new"
+		  ]
+		},
+		{
+		  "Name": "First",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub",
+			"index"
+		  ]
+		},
+		{
+		  "Name": "Last",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub",
+			"index"
+		  ]
+		},
+		{
+		  "Name": "First",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub"
+		  ]
+		},
+		{
+		  "Name": "Last",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub"
+		  ]
+		},
+		{
+		  "Name": "IndexOf",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub",
+			"index"
+		  ]
+		},
+		{
+		  "Name": "IndexOf",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub"
+		  ]
+		},
+		{
+		  "Name": "StartsWith",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub"
+		  ]
+		},
+		{
+		  "Name": "EndsWith",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub"
+		  ]
+		},
+		{
+		  "Name": "IsAlphaNumeric",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "IsAlpha",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "IsNumeric",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "IsLower",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "IsUpper",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "SplitLines",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "Contains",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub"
+		  ]
+		},
+		{
+		  "Name": "PadLeft",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub",
+			"count"
+		  ]
+		},
+		{
+		  "Name": "PadRight",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub",
+			"count"
+		  ]
+		},
+		{
+		  "Name": "Split",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value",
+			"sub"
+		  ]
+		},
+		{
+		  "Name": "Trim",
+		  "Static": true,
+		  "Visibility": "Public", 
+		  "Arguments": [
+		    "value"
+		  ]
+		}
+	  ]
+	},
+	{
+	  "Name": "__list",
+	  "Methods": [
+	    {
+		  "Name": "Head",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "Tail",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "Last",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "Init",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "Push",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"x"
+		  ]
+		},
+		{
+		  "Name": "PushRange",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"x"
+		  ]
+		},
+		{
+		  "Name": "Pop",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "PopRange",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"count"
+		  ]
+		},
+		{
+		  "Name": "Insert",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"index",
+			"x"
+		  ]
+		},
+		{
+		  "Name": "InsertRange",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"index",
+			"x"
+		  ]
+		},
+		{
+		  "Name": "Remove",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"x"
+		  ]
+		},
+		{
+		  "Name": "RemoveAt",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"index"
+		  ]
+		},
+		{
+		  "Name": "Reverse",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "IndexOf",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"x"
+		  ]
+		},
+		{
+		  "Name": "Empty",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value"
+		  ]
+		},
+		{
+		  "Name": "Contains",
+		  "Visibility": "Public",
+		  "Static": true,
+		  "Arguments": [
+		    "value",
+			"x"
+		  ]
+		}
+	  ]
+	}
+]

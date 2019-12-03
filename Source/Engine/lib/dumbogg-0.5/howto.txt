@@ -1,0 +1,117 @@
+DUMB Ogg Vorbis Add-on
+
+"Here's how ya use it..."
+
+This file will tell you exactly how to install and use the DUMB Ogg Vorbis
+add-on. It assumes that you already know how to install and use DUMB, the
+finest media player available for the Allegro Game Library.
+
+;)
+
+Editor's Note: yay :)
+
+Note that this library doesn't do the work of decoding an Ogg Vorbis stream.
+All it does is link DUMB and the various Ogg Vorbis libraries (libogg,
+libvorbis and libvorbisfile) in such a way that you can load an OGG file into
+a DUH struct and then play it like any other music file supported by DUMB or
+an add-on.
+
+-- THIS ADDON LIB HAS ONLY BEEN TESTED WITH DJGPP AND MINGW32 --
+      -- RESULTS ON ANY OTHER COMPILERS ARE UNDEFINED!! --
+
+... but I can elaborate on that a bit. If you compile Ogg Vorbis using MSVC,
+the DLL will not export the ov_read_float() function. This is required by the
+plug-in. We recommend that Windows users use DJGPP or MinGW. If you wish to
+use MSVC, you'll have to edit the libvorbis/win32/vorbisfile.def file and add
+ov_read_float to the list. The Linux build reportedly goes smoothly, but let
+entheh@users.sf.net know if you have trouble here.
+
+
+With DJGPP or MinGW, it just takes four easy steps. Users of other platforms,
+be creative...
+
+
+1.0: Install libogg and libvorbis. This is pretty easy if you're familiar
+with making libraries and stuff. I've included batch files to compile all the
+required files for you, since I don't have the time right now to put together
+a makefile. Sorry.
+
+  1.1: Visit www.vorbis.org and download both libogg and libvorbis. This has
+  been tested against v1.0. It should work with all future versions, but let
+  entheh@users.sf.net know if you have trouble.
+
+  1.2: If you're running under Linux or MacOS, or using MSVC, then use the
+  project files included with those packages. (Remember that
+  libvorbis/win32/vorbisfile.def needs editing first though, if you're using
+  MSVC.) If you're using MinGW32, then proceed to Step 1.3. If you're using
+  DJGPP, read the file 'djgpp.txt' first for information on modifying your
+  copy of the libogg and libvorbis headers to compile under DJGPP, then you
+  can proceed to Step 1.3. Future versions of libogg and libvorbis should
+  include this fix, though I haven't had a chance to contact Monty about it
+  yet.
+
+  1.3: Copy the file 'libogg.bat' to the src/ directory of the libogg package
+  you downloaded. Open up a command prompt, and make sure that the path
+  points to the compiler you want to use and any other settings are in place
+  for using your compiler. Now run libogg.bat. It should create for you
+  libogg.a; copy that to your compiler's lib/ directory, and copy the
+  'include/ogg' directory to your compiler's include/ directory (so the files
+  go in the newly created include/ogg).
+
+  1.4: Copy the file 'libvorbis.bat' to the lib/ directory of the libvorbis
+  package you downloaded, follow the same steps to ensure that your compiler
+  will work correctly, and then run it. Do the same with 'libvorbisfile.bat'.
+  I've also included batch files to compile the libvorbisenc library;
+  although this is not required by DUMBOGG, you may find it useful in your
+  own projects. Now, just as you did in Step 1.3, copy the output files
+  libvorbis.a and libvorbisfile.a to your compiler's lib/ directory, and copy
+  the include/vorbis/ directory to your compiler's include/ directory.
+
+  1.5: Good, now you have libogg, libvorbis and libvorbisfile compiled,
+  you're halfway there!
+
+
+
+2.0: Make sure DUMB is compiled and installed (see its own documentation for
+this). Then change to the folder containing DUMBOGG. Refer back to the docs
+for installing DUMB; you will need to follow all the same steps for DUMBOGG.
+However, there is one difference; instead of 'makecore', you will have to
+type 'makelib' if you wish to use DUMBOGG without Allegro.
+
+
+
+3.0: Yay! Now you have the DUMBOGG library installed. I know it was a bit of
+work, but it sure was fun, right? Oh well, hopefully you won't need to do
+that ever again :P. Now here's how to use it:
+
+  3.1: Make a DUH pointer just as you would for one of DUMB's supported file
+  formats. Now, to load your .ogg file, use the function dumb_load_ogg. A
+  typical line would look like this:
+
+        DUH *my_ogg = dumb_load_ogg("my_ogg.ogg", 1);
+
+  3.2: That's all you need to do; you can now use it like any other DUH file,
+  playing it just as if it were an IT file for example. On a side note, this
+  function takes an extra parameter. When it's nonzero, the ogg will loop
+  forever (until you tell it to stop), and when it's 0, the ogg will play
+  once, then al_poll_duh() will return nonzero, cueing you that the file has
+  run its time, and you can call al_stop_duh() whenever you like.
+
+
+4.0: Function rundown:
+
+  4.1: DUH *dumb_load_ogg(const char *filename, int loop);
+  Loads an Ogg Vorbis file into a DUH structure.  See step 3.2.
+
+  Note that this function doesn't actually open the file permanently. It only
+  collects data and stores the filename. al_start_duh() or
+  duh_start_renderer() will open the file each time they are called, and
+  al_stop_duh() or duh_end_renderer() will close it again. This enables you
+  to play the same OGG file more than once at a time.
+
+
+
+
+That's all, folks!
+-Sven
+-Edited by entheh (but remember that Sven did most of the work! :)

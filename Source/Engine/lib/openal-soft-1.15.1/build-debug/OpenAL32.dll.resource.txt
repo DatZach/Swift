@@ -1,0 +1,1 @@
+2 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "X:/Swift/Source/Engine/lib/openal-soft-1.15.1/build-debug/OpenAL32.dll.embed.manifest"

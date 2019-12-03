@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../zlib.h
+zconf.h
+../zconf.h
+
+X:/Swift/Source/Engine/lib/zlib-1.2.8/test/example.c
+zlib.h
+X:/Swift/Source/Engine/lib/zlib-1.2.8/test/zlib.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+
+zconf.h
+windows.h
+-
+limits.h
+-
+sys/types.h
+-
+stdarg.h
+-
+stddef.h
+-
+unistd.h
+-
+unixio.h
+-
+

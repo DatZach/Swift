@@ -1,0 +1,1 @@
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "X:/Swift/Source/Engine/lib/zlib-1.2.8/build-debug/minigzip.exe.embed.manifest"

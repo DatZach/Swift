@@ -1,0 +1,82 @@
+{
+	/*
+	 *	Configuration section describes all catch-all engine
+	 *	configurations that don't fit a specific section.
+	 *	Some of these relate to engine behavior, others relate
+	 *	to the game's behavior. All configurations are applied
+	 *	upon engine initialization.
+	 *	Some of these are platform specific configurations.
+	 */
+	"Configuration" :
+	{
+		/*
+		 *	Executable metadata, reference C# AssemblyInfo for more
+		 *	information.
+		 */
+		"title" : "My Game",
+		"description" : "A pretty cool game made in Swift!",
+		"company" : "x2048",
+		"product" : "My Game",
+		"copyright" : "2013 x2048",
+		"trademark" : "",
+		"version" : "1.0.0",
+		
+		/*
+		 *	State the Engine loads on initialization.
+		 *	Default: None (Engine panic)
+		 */
+		"initialstate" : "MainMenu",
+		
+		/*
+		 *	Build version (last number) will be auto-incremented every build.
+		 *	Default: true
+		 */
+		"incbuild" : true,
+		
+		/*
+		 *	Texture Sheet size.
+		 *	We default to 2048x2048 because according to http://webglstats.com/#h_texsize it's
+		 *	the largest globally accepted texture size limit.
+		 *	Default = 2048
+		 */
+		"sheetsize" : 2048,
+		
+		/*
+		 *	Target framerate.
+		 *	You can change this because of issues with SwapBuffer timing and vsync.
+		 *	Setting the target framerate to 0 will uncap the refresh rate and lead to higher CPU
+		 *	time usage, but have smoother swapping.
+		 *	Setting it to 60 will actually end up refreshing around 58 fps on Windows because of
+		 *	issues in timing.
+		 *	Default: 60
+		 */
+		 "targetframerate" : 60,
+		
+		/* Window Size. Default = (x = 800, y = 600) */
+		"size" :
+		{
+			"x" : 800,
+			"y" : 600
+		},
+		
+		/* Start in fullscreen. Default = false */
+		"fullscreen" : true,
+		
+		/* Vertical Sync. Default = true */
+		"vsync" : true,
+		
+		/* Display cursor. Default = true */
+		"cursor" : true,
+		
+		/*
+		 *	Anti Aliasing level.
+		 *	Valid values:
+		 *		0 2 4 8 16 32
+		 *	Default = 0
+		 */
+		"aa" : 2,
+		
+		/* Icon filename. Default = no icon */
+		"icon" : "game.ico"
+	}
+}

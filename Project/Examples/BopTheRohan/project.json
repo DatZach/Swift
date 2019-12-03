@@ -1,0 +1,13 @@
+{
+  "target": "BopTheRohan",
+  "assets": [
+    "config.json",
+    "Textures",
+    "Sounds",
+    "Fonts",
+    "Scenes"
+  ],
+  "sources": [
+    "Scripts"
+  ]
+}

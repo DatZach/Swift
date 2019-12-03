@@ -1,0 +1,13 @@
+{
+  "Target": "foo",
+  "Assets": [
+    "textures",
+    "sounds",
+    "fonts",
+    "states",
+    "config.json"
+  ],
+  "Sources": [
+    "scripts"
+  ]
+}

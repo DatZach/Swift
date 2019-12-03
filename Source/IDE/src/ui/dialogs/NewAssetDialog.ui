@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewAssetDialog</class>
+ <widget class="QDialog" name="NewAssetDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>364</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add New Asset</string>
+  </property>
+  <widget class="QListWidget" name="listWidgetAssets">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>621</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="currentRow">
+    <number>0</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>Texture</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../../resources/icons.qrc">
+      <normaloff>:/icons/rainbow_32x32.png</normaloff>:/icons/rainbow_32x32.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sound</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../../resources/icons.qrc">
+      <normaloff>:/icons/sound_32x32.png</normaloff>:/icons/sound_32x32.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Font</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../../resources/icons.qrc">
+      <normaloff>:/icons/font_32x32.png</normaloff>:/icons/font_32x32.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Scene</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../../resources/icons.qrc">
+      <normaloff>:/icons/map_32x32.png</normaloff>:/icons/map_32x32.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Script</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../../resources/icons.qrc">
+      <normaloff>:/icons/script_32x32.png</normaloff>:/icons/script_32x32.png</iconset>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="lineEditName">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>310</y>
+     <width>571</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>NewAsset</string>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAssetName">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>311</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Name:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonCancel">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>334</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonAdd">
+   <property name="geometry">
+    <rect>
+     <x>466</x>
+     <y>334</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>pushButtonAdd</tabstop>
+  <tabstop>pushButtonCancel</tabstop>
+  <tabstop>listWidgetAssets</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../resources/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

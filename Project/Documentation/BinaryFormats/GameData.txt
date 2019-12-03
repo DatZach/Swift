@@ -1,0 +1,320 @@
+Game Data Format
+================
+
+Revised: 11/20/13
+
+Overview
+--------
+
+	Game data is stored in an external or internal file depending on the build mode.
+This describes to the engine all of the game's assets and code. This document outlines
+this format and keeps track of version history. The format is based around the IFF
+file format (http://en.wikipedia.org/wiki/Interchange_File_Format).
+
+Version History
+---------------
+
+Version 10 [November 20th, 2013]:
+	- Split audio files from sound section
+
+Version 9 [November 14th, 2013]:
+	- Added initial state to CNFG section
+
+Version 8 [November 13th, 2013]:
+	- Changes to Bytecode section to refine it quiet a bit
+
+Version 7 [October 16th, 2013]:
+	- Added scenes section
+
+Version 6 [October 9th, 2013]:
+	- Added primitive bytecode objects
+
+Version 5 [September 8th, 2013]:
+	- Removed Sound.SampleRate & Sound.BitRate
+
+Version 4 [September 4th, 2013]:
+	- Added Config.TargetFramerate
+
+Version 3 [August 27th, 2013]:
+	- Move frame information from texture sheet section
+	  to texture section per value
+
+Version 2 [August 26th, 2013]:
+	- Move PlatformFlags into header
+	- Moved Windows configs into global configs
+	- Updated PlatformFlags to reflect current Compiler usage
+
+Version 1 [August 24th, 2013]:
+	- Initial Version
+
+Format
+------
+
+Magic		: SWAG
+Version		: 10
+
+<Header>
+ 0 1 Count
+For Count {
+	 0 4 Section Tag
+	<Section>
+}
+
+Section IDs
+-----------
+
+CNFG			Configuration
+SDRM			Digital Rights Management
+TXTR			Textures
+SOND			Sounds
+FONT			Fonts
+CODE			Compiled Bytecode
+STAT			States
+SCNE			Scenes
+TXST			Texture Sheets
+AUDO			Audio
+
+Header
+------
+
+ 0 4 Magic
+ 4 2 Version
+ 6 1 Platform Flags [Flags] {
+	0	Windows
+	1	Mac OS X
+	2	Linux
+	3	Android
+	4	iOS
+	5	HTML5
+	6	Undefined
+	7	Unknown
+ }
+
+Configuration
+-------------
+
+ 0 ? Length		{ String <Game Title> }
+ 0 2 Width
+ 2 2 Height
+ 4 1 Fullscreen
+ 5 1 VerticalSync
+ 6 1 CursorVisible
+ 7 1 AntiAliasingLevel
+ 8 1 TargetFramerate
+ 9 ? Length		{ String <Initial State> }
+
+Digital Rights Management
+-------------------------
+
+ 0 1 Type [Enum] {
+	0	None
+	1	Alpha
+	2	Free
+	3	Registered
+ }
+
+ If Type == Alpha {
+	1 ? Length	{ String <Key SHA1 Hash> }
+ }
+ Elif Type == Free {
+	1 ? Length	{ String <HWID SHA1 Hash> }
+ }
+ Elif Type == Registered {
+	1 1	Registered Platforms [Enum]
+		 = Header.PlatformFlags
+	2 ? Length	{ String <Key SHA1 Hash> }
+ }
+
+Textures
+--------
+
+ 0 4 Count
+ For Count {
+	 0 4 Length		{ String <Key> }
+	 4 2 Width
+	 6 2 Height
+	 8 4 Count		[ Frames ]
+	 For Count {
+		 0 2 Sheet ID
+		 2 2 X
+		 4 2 Y
+	 }
+	 
+	 0 4 Origin.X (Float)
+	 4 4 Origin.Y (Float)
+	 8 1 Smooth
+	 9 4 BBox.Left (Float)
+	 D 4 BBox.Top (Float)
+	11 4 BBox.Right (Float)
+	15 4 BBox.Bottom (Float)
+	19 1 CollisionMode [Enum] {
+		0	None
+		1	Precise
+		2	BBox
+	}
+	
+	1A 1 Lazy
+ }
+
+Sounds
+------
+
+ 0 4 Count
+ For Count {
+	 0 4 Length		{ String <Key> }
+	 0 1 Mode [Enum] {
+		0	Stream
+		1	Memory
+	 }
+	 
+	 if Mode == Memory {
+		0 4	AudioID
+	 }
+	 elif Mode == Stream {
+		0 4			{ String <Filename> }
+	 }
+ }
+
+Fonts
+-----
+
+ 0 4 Count
+ For Count {
+	 0 4 Length		{ String <Key> }
+	 0 1 Type [Enum] {
+		0	Referenced
+		1	Compiled
+	 }
+	 
+	 if Type == Referenced {
+		0 4 Length		{ String <Fontface Name> }
+	 }
+	 elif Type == Compiled {
+		0 4 Length		{ Compressed Stream <TTF File> }
+	 }
+	 
+	 0 1 AntiAliasing
+	 1 4 Size
+	 5 1 Style Flags [Flags] {
+		0	Bold
+		1	Italic
+		2	Underline
+		3	Overline
+		4	StrikeThrough
+		5	Outline
+		6	DropShadow
+		7	Undefined
+	 }
+	 
+	 if StyleFlags.Outline {
+		 0 4 Color (RGBA)
+		 4 2 Thickness
+	 }
+	 
+	 if StyleFlags.DropShadow {
+		 0 4 Color (RGBA)
+		 4 4 Spread
+		 8 4 Offset.X
+		 C 4 Offset.Y
+	 }
+ }
+
+Compiled Bytecode
+-----------------
+
+ 0 4 Count
+ For Count {
+	 0 1 Type [Enum] {
+		0	Undefined
+		1	Class
+		2	Global
+		3	Entity
+		4	State
+	 }
+
+	 1 ? String	{ Name }
+
+	 [ Fields ]
+	 0 2 Count
+	 For Count {
+		 0 ? Length { String <Name> }
+
+		 [<Variant>]
+		 0 1 Type [Enum] {
+			0	Nil
+			1	Integer
+			2	Double
+			3	String
+			4	List
+			5	Object
+		 }
+
+		 If Type == Nil {
+			[ Nothing ]
+		 }
+		 Elif Type == Integer {
+			 0 8 Value (int)
+		 }
+		 Elif Type == Double {
+			 0 8 Value (double)
+		 }
+		 Elif Type == String {
+			 0 ? Length	{ String <Value> }
+		 }
+		 Elif Type == List {
+			 0 4 Length
+			 For Count {
+				<Variant>
+			 }
+		 }
+		 Elif Type == Object {
+			[ Nothing ]
+		 }
+	 }
+ 
+	 [ Methods ]
+	 0 2 Count
+	 For Count {
+		 0 ? Length { String <Name> }
+		 0 1 ArgumentCount
+
+		 0 4 Length
+		 For Length {
+			 0 1 Opcode
+			 For Opcode.OperandCount {
+				<Variant>
+			 }
+		 }
+	 }
+ }
+
+States
+------
+
+	Can't work on this until I figure out how I want
+	states designed.
+
+Scenes
+------
+
+ 0 4 Count
+ For Count {
+	 0 ? String			{ Name }
+	 0 4 Length			{ Compressed Stream <Scene Data> }
+ }
+
+Texture Sheets
+--------------
+
+ 0 4 Count
+ For Count {
+	 0 4 Length { Uncompressed <PNG> }
+ }
+
+Audio
+-----
+
+ 0 4 Count
+ For Count {
+	0 4 Length { Uncompressed <Audio> }
+ }

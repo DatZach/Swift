@@ -1,0 +1,8 @@
+Swift's Programming Language
+============================
+
+Revision Date: September 12th, 2013
+
+These documents outline the first draft of the Swift Programming Language.
+All language features will be outlined here, this includes syntax,
+built-in functions, operator precedence, etc.

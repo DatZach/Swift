@@ -1,0 +1,34 @@
+# Ignore contents of any bin folder
+[Dd]ebug
+[Rr]elease
+Tools/push/bin
+
+*.exe
+
+# Ignore images
+*.dds
+*.jpg
+*.bmp
+*.png
+*.tga
+*.ico
+
+# Ignore GCC crap
+*.a
+
+# Ignore MSVC crap
+*.tlog
+*.ilk
+*.manifest
+*.log
+*.obj
+*.idb
+*.suo
+*.pdb
+
+# Misc
+*.html
+*.bi
+
+# We want everything in Project
+!Project/

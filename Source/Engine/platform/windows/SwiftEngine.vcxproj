@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2F319CC4-5E72-4D2C-8BB0-DCEF16BBE47C}</ProjectGuid>
+    <RootNamespace>SwiftEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\..\bin\windows\$(Configuration)\</OutDir>
+    <IncludePath>C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\..\bin\windows\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../src/Include/;libs/include/</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WINDOWS;DEBUG;_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>libs\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libvorbisfile_static.lib;libvorbis_static.lib;dumbd_static.lib;libogg_static.lib;openal32.lib;zlibstaticd.lib;SOIL.lib;glew32sd.lib;glfw3.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:LIBCMTD.lib %(AdditionalOptions)</AdditionalOptions>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../../src/Include/;libs/include/</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WINDOWS;_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>libs\Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libogg_static.lib;libvorbisfile_static.lib;libvorbis_static.lib;dumb_static.lib;openal32.lib;zlibstatic.lib;SOIL.lib;glew32s.lib;glfw3.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>python ../../../../Tools/EnginePreBuild.py $(ProjectDirectory)..\..\src\</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Audio\Audio.cpp" />
+    <ClCompile Include="..\..\src\Audio\AudioFile.cpp" />
+    <ClCompile Include="..\..\src\Audio\AudioSource.cpp" />
+    <ClCompile Include="..\..\src\Audio\AudioStream.cpp" />
+    <ClCompile Include="..\..\src\Audio\Codec\Dumb.cpp" />
+    <ClCompile Include="..\..\src\Audio\Codec\DumbOgg.cpp" />
+    <ClCompile Include="..\..\src\Audio\Codec\Ogg.cpp" />
+    <ClCompile Include="..\..\src\Audio\Codec\Wav.cpp" />
+    <ClCompile Include="..\..\src\Audio\Sound.cpp" />
+    <ClCompile Include="..\..\src\Engine\Entity.cpp" />
+    <ClCompile Include="..\..\src\Engine\EntityManager.cpp" />
+    <ClCompile Include="..\..\src\Engine\Game.cpp" />
+    <ClCompile Include="..\..\src\Engine\State.cpp" />
+    <ClCompile Include="..\..\src\GameData\GdAudio.cpp" />
+    <ClCompile Include="..\..\src\GameData\GdBytecodeObjects.cpp" />
+    <ClCompile Include="..\..\src\GameData\GdConfiguration.cpp" />
+    <ClCompile Include="..\..\src\GameData\GameData.cpp" />
+    <ClCompile Include="..\..\src\GameData\GdDrm.cpp" />
+    <ClCompile Include="..\..\src\GameData\GdScenes.cpp" />
+    <ClCompile Include="..\..\src\GameData\GdSounds.cpp" />
+    <ClCompile Include="..\..\src\GameData\GdTextures.cpp" />
+    <ClCompile Include="..\..\src\GameData\GdTextureSheets.cpp" />
+    <ClCompile Include="..\..\src\Main.cpp" />
+    <ClCompile Include="..\..\src\SceneData\SdBackground.cpp" />
+    <ClCompile Include="..\..\src\SceneData\SdConfiguration.cpp" />
+    <ClCompile Include="..\..\src\SceneData\SdEntities.cpp" />
+    <ClCompile Include="..\..\src\SceneData\SceneData.cpp" />
+    <ClCompile Include="..\..\src\SceneData\SdTiles.cpp" />
+    <ClCompile Include="..\..\src\StdLib\Audio\SlSound.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\StdLib.cpp" />
+    <ClCompile Include="..\..\src\StdLib\IO\SlBinaryFile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\System\SlDebug.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlFileSystem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\DataStructures\SlGrid.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlKeyboard.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlMouse.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Math\SlRandom.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\System\SlGame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\RunTime\SlList.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Math\SlMath.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\RunTime\SlString.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlTextFile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\System\SlTime.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Video\SlColor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Video\SlSprite.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Util\CommandLine.cpp" />
+    <ClCompile Include="..\..\src\Util\FileSystem.cpp" />
+    <ClCompile Include="..\..\src\Util\Logger.cpp" />
+    <ClCompile Include="..\..\src\Util\StopWatch.cpp" />
+    <ClCompile Include="..\..\src\Util\Stream.cpp" />
+    <ClCompile Include="..\..\src\Video\Color.cpp" />
+    <ClCompile Include="..\..\src\Video\RenderTarget.cpp" />
+    <ClCompile Include="..\..\src\Video\Shader.cpp" />
+    <ClCompile Include="..\..\src\Video\Shape.cpp" />
+    <ClCompile Include="..\..\src\Video\Sprite.cpp" />
+    <ClCompile Include="..\..\src\Video\SpriteBatch.cpp" />
+    <ClCompile Include="..\..\src\Video\Texture.cpp" />
+    <ClCompile Include="..\..\src\Video\SheetCache.cpp" />
+    <ClCompile Include="..\..\src\Video\TileMap.cpp" />
+    <ClCompile Include="..\..\src\Video\Vertex.cpp" />
+    <ClCompile Include="..\..\src\Video\VertexBuffer.cpp" />
+    <ClCompile Include="..\..\src\Video\Video.cpp" />
+    <ClCompile Include="..\..\src\Video\Window.cpp" />
+    <ClCompile Include="..\..\src\Vm\Class.cpp" />
+    <ClCompile Include="..\..\src\Vm\Instruction.cpp" />
+    <ClCompile Include="..\..\src\Vm\Method.cpp" />
+    <ClCompile Include="..\..\src\Vm\Variant.cpp" />
+    <ClCompile Include="..\..\src\Vm\VirtualMachine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Include\Audio\Audio.hpp" />
+    <ClInclude Include="..\..\src\Include\Audio\AudioFile.hpp" />
+    <ClInclude Include="..\..\src\Include\Audio\AudioSource.hpp" />
+    <ClInclude Include="..\..\src\Include\Audio\AudioStream.hpp" />
+    <ClInclude Include="..\..\src\Include\Audio\Codec.hpp" />
+    <ClInclude Include="..\..\src\Include\Audio\Codecs\Dumb.hpp" />
+    <ClInclude Include="..\..\src\Include\Audio\Codecs\Ogg.hpp" />
+    <ClInclude Include="..\..\src\Include\Audio\Codecs\Wav.hpp" />
+    <ClInclude Include="..\..\src\Include\Audio\Sound.hpp" />
+    <ClInclude Include="..\..\src\Include\Engine\Entity.hpp" />
+    <ClInclude Include="..\..\src\Include\Engine\EntityManager.hpp" />
+    <ClInclude Include="..\..\src\Include\Engine\Event.hpp" />
+    <ClInclude Include="..\..\src\Include\Engine\Game.hpp" />
+    <ClInclude Include="..\..\src\Include\Engine\State.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\Asset.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\Audio.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\BytecodeObjects.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\Configuration.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\Drm.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\GameData.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\Scenes.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\Sounds.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\Textures.hpp" />
+    <ClInclude Include="..\..\src\Include\GameData\TextureSheets.hpp" />
+    <ClInclude Include="..\..\src\Include\SceneData\Background.hpp" />
+    <ClInclude Include="..\..\src\Include\SceneData\Configuration.hpp" />
+    <ClInclude Include="..\..\src\Include\SceneData\Entities.hpp" />
+    <ClInclude Include="..\..\src\Include\SceneData\SceneData.hpp" />
+    <ClInclude Include="..\..\src\Include\SceneData\Section.hpp" />
+    <ClInclude Include="..\..\src\Include\SceneData\Tiles.hpp" />
+    <ClInclude Include="..\..\src\Include\StdLib\SlApi.hpp" />
+    <ClInclude Include="..\..\src\Include\StdLib\StdLib.hpp" />
+    <ClInclude Include="..\..\src\Include\StdLib\Video\Sprite.hpp" />
+    <ClInclude Include="..\..\src\Include\Util\CommandLine.hpp" />
+    <ClInclude Include="..\..\src\Include\Util\FileSystem.hpp" />
+    <ClInclude Include="..\..\src\Include\Util\Logger.hpp" />
+    <ClInclude Include="..\..\src\Include\Util\Rectangle.hpp" />
+    <ClInclude Include="..\..\src\Include\Util\Stack.hpp" />
+    <ClInclude Include="..\..\src\Include\Util\StopWatch.hpp" />
+    <ClInclude Include="..\..\src\Include\Util\Stream.hpp" />
+    <ClInclude Include="..\..\src\Include\Util\Vector2.hpp" />
+    <ClInclude Include="..\..\src\Include\Version.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Color.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Drawable.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\RenderTarget.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Shader.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Shape.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Sprite.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\SpriteBatch.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Texture.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\SheetCache.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\TileMap.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Vertex.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\VertexBuffer.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Video.hpp" />
+    <ClInclude Include="..\..\src\Include\Video\Window.hpp" />
+    <ClInclude Include="..\..\src\Include\Vm\Class.hpp" />
+    <ClInclude Include="..\..\src\Include\Vm\Instruction.hpp" />
+    <ClInclude Include="..\..\src\Include\Vm\Method.hpp" />
+    <ClInclude Include="..\..\src\Include\Vm\Variant.hpp" />
+    <ClInclude Include="..\..\src\Include\Vm\VirtualMachine.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\Include\Util\Vector2.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

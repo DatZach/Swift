@@ -1,0 +1,14 @@
+{
+  "Target": "Sandbox",
+  "Assets": [
+    "config.json",
+    "textures",
+    "sounds",
+    "fonts",
+	"scenes"
+  ],
+  "Sources": [
+    "scripts",
+    "states"
+  ]
+}

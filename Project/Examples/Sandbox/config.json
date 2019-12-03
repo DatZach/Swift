@@ -1,0 +1,24 @@
+{
+  "Configuration": {
+    "Title": "Sandbox",
+    "Description": "",
+    "Company": "",
+    "Product": "Sandbox",
+    "Copyright": "",
+    "Trademark": "",
+    "Version": "1.0.0",
+    "InitialState": "Game",
+    "IncBuild": true,
+    "SheetSize": 2048,
+    "TargetFramerate": 60,
+    "Size": {
+      "X": 1280,
+      "Y": 720
+    },
+    "Fullscreen": false,
+    "Vsync": true,
+    "Cursor": true,
+    "AntiAliasingLevel": 0,
+    "Icon": ""
+  }
+}

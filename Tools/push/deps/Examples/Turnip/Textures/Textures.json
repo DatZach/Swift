@@ -1,0 +1,1 @@
+{ "Textures" : { "Background" : { "animated" : false, "cmode" : "none", "filename" : "background.png", "lazy" : false, "origin" : { "x" : 0, "y" : 0 }, "smooth" : false }, "Turnip" : { "animated" : false, "cmode" : "none", "filename" : "turnip.png", "lazy" : false, "origin" : { "x" : 0, "y" : 0 }, "smooth" : false } } }

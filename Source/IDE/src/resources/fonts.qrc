@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/Inconsolata.otf</file>
+        <file>fonts/Titillium-Regular.otf</file>
+        <file>fonts/Titillium-RegularUpright.otf</file>
+    </qresource>
+</RCC>

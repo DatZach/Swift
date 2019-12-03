@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Main.cpp" />
+    <ClCompile Include="..\..\src\Video\Window.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\RenderTarget.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\Shader.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\Color.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\Vertex.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\VertexBuffer.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\Texture.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Util\Stream.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GameData.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Util\CommandLine.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Util\StopWatch.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Game.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Util\Logger.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\Audio.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\Video.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\AudioFile.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\AudioSource.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\AudioStream.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\Codec\Dumb.cpp">
+      <Filter>Audio\Codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\Codec\Ogg.cpp">
+      <Filter>Audio\Codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\Codec\Wav.cpp">
+      <Filter>Audio\Codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Entity.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\State.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\EntityManager.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\Sound.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\Sprite.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Util\FileSystem.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Audio\Codec\DumbOgg.cpp">
+      <Filter>Audio\Codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GdBytecodeObjects.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GdConfiguration.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GdSounds.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GdTextures.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GdTextureSheets.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\SpriteBatch.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SceneData\SdBackground.cpp">
+      <Filter>SceneData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SceneData\SdConfiguration.cpp">
+      <Filter>SceneData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SceneData\SdEntities.cpp">
+      <Filter>SceneData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SceneData\SceneData.cpp">
+      <Filter>SceneData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GdScenes.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\StdLib.cpp">
+      <Filter>StdLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Audio\SlSound.cpp">
+      <Filter>StdLib\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\SheetCache.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\TileMap.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SceneData\SdTiles.cpp">
+      <Filter>SceneData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GdAudio.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Video\SlSprite.cpp">
+      <Filter>StdLib\Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Video\SlColor.cpp">
+      <Filter>StdLib\Video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\System\SlTime.cpp">
+      <Filter>StdLib\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameData\GdDrm.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\System\SlGame.cpp">
+      <Filter>StdLib\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\System\SlDebug.cpp">
+      <Filter>StdLib\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlBinaryFile.cpp">
+      <Filter>StdLib\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlFileSystem.cpp">
+      <Filter>StdLib\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\DataStructures\SlGrid.cpp">
+      <Filter>StdLib\DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlKeyboard.cpp">
+      <Filter>StdLib\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\RunTime\SlList.cpp">
+      <Filter>StdLib\RunTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Math\SlMath.cpp">
+      <Filter>StdLib\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlMouse.cpp">
+      <Filter>StdLib\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\Math\SlRandom.cpp">
+      <Filter>StdLib\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\RunTime\SlString.cpp">
+      <Filter>StdLib\RunTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StdLib\IO\SlTextFile.cpp">
+      <Filter>StdLib\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Vm\Class.cpp">
+      <Filter>Vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Vm\Instruction.cpp">
+      <Filter>Vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Vm\Method.cpp">
+      <Filter>Vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Vm\Variant.cpp">
+      <Filter>Vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Vm\VirtualMachine.cpp">
+      <Filter>Vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Video\Shape.cpp">
+      <Filter>Video</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{0f9d8ae3-b4cc-44a2-ab85-99a01762fcdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{21921bb2-76b8-49e6-8a91-f7c051754bb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Engine">
+      <UniqueIdentifier>{82d61379-7903-4732-ab44-48845692faf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Video">
+      <UniqueIdentifier>{9eb69ebd-28d9-4470-9dd8-74c0ad547409}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Video">
+      <UniqueIdentifier>{db9dada2-0afb-4562-b369-a983c6d8fc77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{6f4c0167-ff5b-44f4-8cf7-4459484148a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vm">
+      <UniqueIdentifier>{3e1ca02e-6ba7-421d-b2f6-682652cf7c66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Util">
+      <UniqueIdentifier>{996b9d91-e43c-47c7-9af6-20956ecbb146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameData">
+      <UniqueIdentifier>{39f8839c-d2f9-41f9-81e4-7b1baa0af044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\GameData">
+      <UniqueIdentifier>{2f3a7800-e43e-4ddf-9f56-4a3fb78db86a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{36b6dfa6-77e8-4ebc-bb61-0e79b3458f17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Audio">
+      <UniqueIdentifier>{fb9237ab-19e0-443e-ae1c-71b95db04c86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Audio\Codecs">
+      <UniqueIdentifier>{bd8cdb31-3a08-4bfa-bf46-21dd97af1f61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio\Codecs">
+      <UniqueIdentifier>{98fac1d3-1f1a-4b5e-b11b-011f1065c283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneData">
+      <UniqueIdentifier>{7856e366-f61a-4938-9e40-a00979cc6027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\SceneData">
+      <UniqueIdentifier>{7bf78c38-ea78-42c2-abf5-693c4861eea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\StdLib">
+      <UniqueIdentifier>{404f2645-3b03-474a-9702-2d388934b5bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdLib">
+      <UniqueIdentifier>{2e9e3be5-4084-4e11-9d96-0a1d7cc5b5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdLib\System">
+      <UniqueIdentifier>{19f7bccc-3dfe-4872-8aca-54c776bdd29d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdLib\Audio">
+      <UniqueIdentifier>{ab4bd4b7-b0b2-4e3b-971d-4d7c6a4a1ec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdLib\Video">
+      <UniqueIdentifier>{c7efe330-e75d-44f4-86c2-e41297ef5365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\StdLib\Video">
+      <UniqueIdentifier>{da6572b0-53ce-418a-8631-f058ba9a8334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdLib\IO">
+      <UniqueIdentifier>{36f30096-b2b9-4a19-a98c-9227b443dbaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdLib\Math">
+      <UniqueIdentifier>{2cfba6a0-88e4-4ec5-85af-4ff6d290a0ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdLib\RunTime">
+      <UniqueIdentifier>{0e97e473-1181-4649-a2a9-5a1d75bcaf3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdLib\DataStructures">
+      <UniqueIdentifier>{72ad95c6-f66b-4f55-9a20-57e2b27fdc84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Vm">
+      <UniqueIdentifier>{3a35a11f-7f12-4a2b-8284-4cac4c53c50f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Include\Video\Window.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\RenderTarget.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\Shader.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\Color.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\Drawable.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\Vertex.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\VertexBuffer.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\Texture.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Util\Stream.hpp">
+      <Filter>Include\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\GameData.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\Configuration.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\Asset.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\TextureSheets.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\Textures.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Util\CommandLine.hpp">
+      <Filter>Include\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Util\StopWatch.hpp">
+      <Filter>Include\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Engine\Event.hpp">
+      <Filter>Include\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Engine\Game.hpp">
+      <Filter>Include\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Util\Logger.hpp">
+      <Filter>Include\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\Audio.hpp">
+      <Filter>Include\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\Video.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\AudioFile.hpp">
+      <Filter>Include\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\AudioSource.hpp">
+      <Filter>Include\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\AudioStream.hpp">
+      <Filter>Include\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\Codecs\Dumb.hpp">
+      <Filter>Include\Audio\Codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\Codecs\Ogg.hpp">
+      <Filter>Include\Audio\Codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\Codecs\Wav.hpp">
+      <Filter>Include\Audio\Codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\Codec.hpp">
+      <Filter>Include\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\Sounds.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Engine\State.hpp">
+      <Filter>Include\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Engine\Entity.hpp">
+      <Filter>Include\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Engine\EntityManager.hpp">
+      <Filter>Include\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Audio\Sound.hpp">
+      <Filter>Include\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\Sprite.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Util\Vector2.hpp">
+      <Filter>Include\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Util\FileSystem.hpp">
+      <Filter>Include\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\BytecodeObjects.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\SpriteBatch.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\SceneData\Background.hpp">
+      <Filter>Include\SceneData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\SceneData\Configuration.hpp">
+      <Filter>Include\SceneData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\SceneData\Entities.hpp">
+      <Filter>Include\SceneData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\SceneData\Section.hpp">
+      <Filter>Include\SceneData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\SceneData\SceneData.hpp">
+      <Filter>Include\SceneData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\Scenes.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Version.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\StdLib\StdLib.hpp">
+      <Filter>Include\StdLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\SheetCache.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\TileMap.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\SceneData\Tiles.hpp">
+      <Filter>Include\SceneData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\Audio.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\StdLib\Video\Sprite.hpp">
+      <Filter>Include\StdLib\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\StdLib\SlApi.hpp">
+      <Filter>Include\StdLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Util\Rectangle.hpp">
+      <Filter>Include\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\GameData\Drm.hpp">
+      <Filter>Include\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Util\Stack.hpp">
+      <Filter>Include\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Vm\Class.hpp">
+      <Filter>Include\Vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Vm\Instruction.hpp">
+      <Filter>Include\Vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Vm\Method.hpp">
+      <Filter>Include\Vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Vm\Variant.hpp">
+      <Filter>Include\Vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Vm\VirtualMachine.hpp">
+      <Filter>Include\Vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Include\Video\Shape.hpp">
+      <Filter>Include\Video</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\Include\Util\Vector2.inl">
+      <Filter>Include\Util</Filter>
+    </None>
+  </ItemGroup>
+</Project>

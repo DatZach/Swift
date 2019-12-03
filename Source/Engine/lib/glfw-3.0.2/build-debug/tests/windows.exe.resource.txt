@@ -1,0 +1,1 @@
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "X:/Swift/Source/Engine/lib/glfw-3.0.2/build-debug/tests/windows.exe.embed.manifest"

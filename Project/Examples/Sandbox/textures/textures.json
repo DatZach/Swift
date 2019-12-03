@@ -1,0 +1,30 @@
+{
+	"Textures" :
+	{
+		"Player" :
+		{
+			"filename" : "Player.png"
+		},
+		
+		"NPC" :
+		{
+			"filename" : "NPC.png"
+		},
+		
+		"Tileset" :
+		{
+			"filename" : "Tileset.png"
+		},
+		
+		"Coin" :
+		{
+			"filename" : "Coin.png"
+		},
+		
+		"Test" :
+		{
+			"filename" : "Test.png",
+			"animated" : true
+		}
+	}
+}

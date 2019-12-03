@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/application.png</file>
+        <file>icons/error.png</file>
+        <file>icons/execute.png</file>
+        <file>icons/folder.png</file>
+        <file>icons/folder_open.png</file>
+        <file>icons/page_white.png</file>
+        <file>icons/preferences.png</file>
+        <file>icons/save.png</file>
+        <file>icons/save_all.png</file>
+        <file>icons/save_as.png</file>
+        <file>icons/script.png</file>
+        <file>icons/script_add.png</file>
+        <file>icons/script_code.png</file>
+        <file>icons/shell_osx.png</file>
+        <file>icons/shell_windows.png</file>
+        <file>icons/stop.png</file>
+        <file>icons/warning.png</file>
+        <file>icons/color_swatch.png</file>
+        <file>icons/palette.png</file>
+        <file>icons/rainbow.png</file>
+        <file>icons/bell.png</file>
+        <file>icons/music.png</file>
+        <file>icons/sound.png</file>
+        <file>icons/font.png</file>
+        <file>icons/map.png</file>
+        <file>logo.small.png</file>
+        <file>icons/bug.png</file>
+        <file>icons/font_add.png</file>
+        <file>icons/map_add.png</file>
+        <file>icons/rainbow_add.png</file>
+        <file>icons/sound_add.png</file>
+        <file>icons/information.png</file>
+        <file>icons/layout_sidebar.png</file>
+        <file>icon.ico</file>
+        <file>icons/sound_mute.png</file>
+        <file>icons/rainbow_32x32.png</file>
+        <file>icons/font_32x32.png</file>
+        <file>icons/map_32x32.png</file>
+        <file>icons/script_32x32.png</file>
+        <file>icons/sound_32x32.png</file>
+        <file>icons/brick.png</file>
+        <file>icons/cursor.png</file>
+        <file>icons/scene_size.png</file>
+    </qresource>
+</RCC>

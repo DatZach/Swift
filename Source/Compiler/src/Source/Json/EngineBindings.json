@@ -1,0 +1,1590 @@
+[
+    {
+        "Constants": [],
+        "Enums": [],
+        "Fields": [
+            {
+                "Name": "__property_Volume",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Pan",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Pitch",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Status",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Volume",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__set_Volume",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Pan",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__set_Pan",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Pitch",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__set_Pitch",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Status",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "__Constructor",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "Play",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "Loop",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "Stop",
+                "Static": false,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Sound"
+    },
+    {
+        "Constants": [],
+        "Enums": [],
+        "Fields": [
+            {
+                "Name": "__property_Width",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Height",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Width",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Height",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "__Constructor",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Get",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1",
+                    "arg2"
+                ],
+                "Name": "Set",
+                "Static": false,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Grid"
+    },
+    {
+        "Constants": [],
+        "Enums": [
+            {
+                "Name": "Mode",
+                "Values": {
+                    "Append": 8,
+                    "Read": 1,
+                    "Truncate": 4,
+                    "Write": 2
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "Origin",
+                "Values": {
+                    "Begin": 0,
+                    "Current": 1,
+                    "End": 2
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Fields": [
+            {
+                "Name": "__property_Position",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Size",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Filename",
+                "Static": false,
+                "Value": {
+                    "StringValue": "",
+                    "Type": "String"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Mode",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Opened",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Eof",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Position",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__set_Position",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Size",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Filename",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Mode",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Opened",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Eof",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "__Constructor",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "Close",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Seek",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadByte",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadWord",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadDword",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadQword",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadDouble",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadSingle",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadString",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteByte",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteWord",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteDword",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteQword",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteDouble",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteSingle",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteString",
+                "Static": false,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "BinaryFile"
+    },
+    {
+        "Constants": [],
+        "Enums": [
+            {
+                "Name": "FileMode",
+                "Values": {
+                    "All": 7,
+                    "Devices": 4,
+                    "Directories": 2,
+                    "Files": 1
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "Attributes",
+                "Values": {
+                    "Archive": 16,
+                    "Directory": 8,
+                    "Hidden": 2,
+                    "ReadOnly": 1,
+                    "System": 4
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Fields": [
+            {
+                "Name": "__property_WorkingDirectory",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_TempDirectory",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_WorkingDirectory",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_TempDirectory",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "FileExists",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "DirectoryExists",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "DeleteFile",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "DeleteDirectory",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "GetFiles",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "GetAttributes",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "GetFilename",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "GetExtension",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "GetPath",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "FileSystem"
+    },
+    {
+        "Constants": [],
+        "Enums": [
+            {
+                "Name": "Key",
+                "Values": {
+                    "A": 65,
+                    "Apostrophe": 39,
+                    "B": 66,
+                    "BackSlash": 92,
+                    "Backspace": 259,
+                    "C": 67,
+                    "CapsLock": 280,
+                    "Comma": 44,
+                    "D": 68,
+                    "Delete": 261,
+                    "Down": 264,
+                    "E": 69,
+                    "Eight": 56,
+                    "End": 269,
+                    "Enter": 257,
+                    "Equal": 61,
+                    "Escape": 256,
+                    "F": 70,
+                    "F1": 290,
+                    "F10": 299,
+                    "F11": 300,
+                    "F12": 301,
+                    "F13": 302,
+                    "F14": 303,
+                    "F15": 304,
+                    "F16": 305,
+                    "F17": 306,
+                    "F18": 307,
+                    "F19": 308,
+                    "F2": 291,
+                    "F20": 309,
+                    "F21": 310,
+                    "F22": 311,
+                    "F23": 312,
+                    "F24": 313,
+                    "F25": 314,
+                    "F3": 292,
+                    "F4": 293,
+                    "F5": 294,
+                    "F6": 295,
+                    "F7": 296,
+                    "F8": 297,
+                    "F9": 298,
+                    "Five": 53,
+                    "ForwardSlash": 47,
+                    "Four": 52,
+                    "G": 71,
+                    "Grave": 94,
+                    "H": 72,
+                    "Home": 268,
+                    "I": 73,
+                    "Insert": 260,
+                    "J": 74,
+                    "K": 75,
+                    "KeypadAdd": 334,
+                    "KeypadDecimal": 330,
+                    "KeypadDivide": 331,
+                    "KeypadEight": 328,
+                    "KeypadEnter": 335,
+                    "KeypadEqual": 336,
+                    "KeypadFive": 325,
+                    "KeypadFour": 324,
+                    "KeypadMultiply": 332,
+                    "KeypadNine": 329,
+                    "KeypadOne": 321,
+                    "KeypadSeven": 327,
+                    "KeypadSix": 326,
+                    "KeypadSubtract": 333,
+                    "KeypadThree": 323,
+                    "KeypadTwo": 322,
+                    "KeypadZero": 320,
+                    "L": 76,
+                    "Left": 263,
+                    "LeftAlt": 342,
+                    "LeftBracket": 91,
+                    "LeftControl": 338,
+                    "LeftShift": 337,
+                    "LeftSuper": 343,
+                    "M": 77,
+                    "Menu": 348,
+                    "Minus": 45,
+                    "N": 78,
+                    "Nine": 57,
+                    "NumLock": 282,
+                    "O": 79,
+                    "One": 49,
+                    "P": 80,
+                    "PageDown": 267,
+                    "PageUp": 266,
+                    "Pause": 284,
+                    "Period": 46,
+                    "PrintScreen": 283,
+                    "Q": 81,
+                    "R": 82,
+                    "Right": 262,
+                    "RightAlt": 346,
+                    "RightBracket": 93,
+                    "RightControl": 345,
+                    "RightShift": 344,
+                    "RightSuper": 347,
+                    "S": 83,
+                    "ScrollLock": 281,
+                    "Semicolon": 59,
+                    "Seven": 55,
+                    "Six": 54,
+                    "Space": 32,
+                    "T": 84,
+                    "Tab": 258,
+                    "Three": 51,
+                    "Two": 50,
+                    "U": 85,
+                    "Unknown": 0,
+                    "Up": 265,
+                    "V": 86,
+                    "W": 87,
+                    "World1": 95,
+                    "World2": 96,
+                    "X": 88,
+                    "Y": 89,
+                    "Z": 90,
+                    "Zero": 48
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Fields": [],
+        "Methods": [
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Pressed",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Held",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Released",
+                "Static": false,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Keyboard"
+    },
+    {
+        "Constants": [],
+        "Enums": [
+            {
+                "Name": "Button",
+                "Values": {
+                    "Eighth": 7,
+                    "Fifth": 4,
+                    "First": 0,
+                    "Fourth": 3,
+                    "Left": 0,
+                    "Middle": 2,
+                    "Right": 1,
+                    "Second": 1,
+                    "Seventh": 6,
+                    "Sixth": 5,
+                    "Third": 2
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Fields": [
+            {
+                "Name": "__property_X",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Y",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_X",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Y",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Pressed",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Held",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Released",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Mouse"
+    },
+    {
+        "Constants": [],
+        "Enums": [
+            {
+                "Name": "Mode",
+                "Values": {
+                    "Append": 8,
+                    "Read": 1,
+                    "Truncate": 4,
+                    "Write": 2
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "Origin",
+                "Values": {
+                    "Begin": 0,
+                    "Current": 1,
+                    "End": 2
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Fields": [
+            {
+                "Name": "__property_Position",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Size",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Filename",
+                "Static": false,
+                "Value": {
+                    "StringValue": "",
+                    "Type": "String"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Mode",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Opened",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "__property_Eof",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Position",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__set_Position",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Size",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Filename",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Mode",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Opened",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Eof",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "__Constructor",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "Close",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Seek",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Read",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadLine",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "ReadToEnd",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Write",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteLine",
+                "Static": false,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "TextFile"
+    },
+    {
+        "Constants": [
+            {
+                "Name": "Pi",
+                "Value": {
+                    "DoubleValue": 3.141592653589793,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "E",
+                "Value": {
+                    "DoubleValue": 2.718281828459045,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Enums": [],
+        "Fields": [],
+        "Methods": [
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Abs",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Acos",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Asin",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Atan",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Atan2",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Ceil",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Cos",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Cosh",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Exp",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Floor",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Log",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Log10",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Max",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Min",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Pow",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Round",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Sign",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Sin",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Sinh",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Sqrt",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Tan",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Tanh",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1",
+                    "arg2"
+                ],
+                "Name": "Clamp",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1",
+                    "arg2"
+                ],
+                "Name": "Lerp",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1",
+                    "arg2"
+                ],
+                "Name": "RLerp",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1",
+                    "arg2",
+                    "arg3",
+                    "arg4",
+                    "arg5"
+                ],
+                "Name": "PointInRect",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Math"
+    },
+    {
+        "Constants": [],
+        "Enums": [],
+        "Fields": [],
+        "Methods": [
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "SetSeed",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "Next",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Next",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Next",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Choose",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Random"
+    },
+    {
+        "Constants": [],
+        "Enums": [],
+        "Fields": [],
+        "Methods": [
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "WriteLine",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Write",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Log",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Trace",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Warn",
+                "Static": true,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "Error",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Debug"
+    },
+    {
+        "Constants": [],
+        "Enums": [],
+        "Fields": [],
+        "Methods": [
+            {
+                "Arguments": [],
+                "Name": "Close",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Game"
+    },
+    {
+        "Constants": [],
+        "Enums": [],
+        "Fields": [
+            {
+                "Name": "__property_Timestamp",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [
+                    "x"
+                ],
+                "Name": "__get_Timestamp",
+                "Static": true,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Time"
+    },
+    {
+        "Constants": [],
+        "Enums": [],
+        "Fields": [
+            {
+                "Name": "r",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "g",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "b",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "a",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [],
+                "Name": "__Constructor",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1",
+                    "arg2",
+                    "arg3"
+                ],
+                "Name": "__Constructor",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1",
+                    "arg2"
+                ],
+                "Name": "__Constructor",
+                "Static": false,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Color"
+    },
+    {
+        "Constants": [],
+        "Enums": [],
+        "Fields": [
+            {
+                "Name": "x",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "y",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "Animated",
+                "Static": false,
+                "Value": {
+                    "IntValue": 0,
+                    "Type": "Int64"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "FrameSpeed",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "Color",
+                "Static": false,
+                "Value": {
+                    "ObjectName": "Color",
+                    "Type": "Object"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "ScaleX",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "ScaleY",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            },
+            {
+                "Name": "Rotation",
+                "Static": false,
+                "Value": {
+                    "DoubleValue": 0.0,
+                    "Type": "Double"
+                },
+                "Visibility": "Public"
+            }
+        ],
+        "Methods": [
+            {
+                "Arguments": [
+                    "arg0"
+                ],
+                "Name": "__Constructor",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [],
+                "Name": "Draw",
+                "Static": false,
+                "Visibility": "Public"
+            },
+            {
+                "Arguments": [
+                    "arg0",
+                    "arg1"
+                ],
+                "Name": "Draw",
+                "Static": false,
+                "Visibility": "Public"
+            }
+        ],
+        "Name": "Sprite"
+    }
+]

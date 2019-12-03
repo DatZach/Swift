@@ -1,0 +1,12 @@
+Credits
+=======
+
+	Authors of various resources found in this directory are documented here.
+
+Authors
+=======
+
+	record_lodoss_war.xm		http://modarchive.org/index.php?request=view_by_moduleid&query=173507
+					Author: Gian Luca Di Martino
+	supersonic.mod			http://modarchive.org/index.php?request=view_by_moduleid&query=90542
+	slow-river.mod			http://modarchive.org/index.php?request=view_by_moduleid&query=80470

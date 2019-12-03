@@ -1,0 +1,7 @@
+Purpose
+=======
+
+Resources in this directory and all subdirectories are used for internal testing of
+the Swift Compiler or Engine. Some of the resources are taken from the Public Domain
+others are created in-house. Public Domain resources will have their license and author
+information in a text file in the directory containing the resources.

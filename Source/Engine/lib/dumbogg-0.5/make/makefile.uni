@@ -1,0 +1,97 @@
+.PHONY: all lib clean veryclean install uninstall
+
+include make/makefile.lst
+
+DEBUG_OBJDIR = obj/unix/debug
+RELEASE_OBJDIR = obj/unix/release
+LIBDIR = lib/unix
+
+CC  = gcc
+
+
+# -------- decide what compiler options to use --------
+#
+WFLAGS = -Wall -W
+
+ifdef PGCC
+    OFLAGS = -mcpu=pentium -O6 -ffast-math
+else
+ifdef PPROONLY
+    OFLAGS = -march=i686 -O2 -fomit-frame-pointer -ffast-math
+else
+ifdef PENTIUMONLY
+    OFLAGS = -march=i586 -O2 -fomit-frame-pointer -ffast-math
+else
+    OFLAGS = -mcpu=pentium -O2 -fomit-frame-pointer -ffast-math
+endif
+endif
+endif
+
+# OFLAGS+= -fno-strict-aliasing -fno-strength-reduce
+
+ifdef	DEBUGMODE
+	# -------- debugging build --------
+	CFLAGS	= -DDEBUGMODE=$(DEBUGMODE) $(WFLAGS) -g3
+	SFLAGS	= -DDEBUGMODE=$(DEBUGMODE) $(WFLAGS)
+	LFLAGS += -g3
+	LDFLAGS = -lvorbisfile -lvorbis -logg -laldmd -ldumbd `allegro-config --libs debug`
+	LIB_FILE = $(LIBDIR)/lib$(LIB_DEBUG).a
+	OBJDIR = $(DEBUG_OBJDIR)
+else
+	#	--------	optimised build	--------
+	CFLAGS	= $(WFLAGS) $(OFLAGS)
+	SFLAGS	= $(WFLAGS)
+	LDFLAGS = -lvorbisfile -lvorbis -logg -laldmb -ldumb `allegro-config --libs`
+	OBJDIR = $(RELEASE_OBJDIR)
+	LIB_FILE = $(LIBDIR)/lib$(LIB).a
+	ifndef SYMBOLMODE
+	LFLAGS	+= -s
+	endif
+endif
+
+OBJECTS = $(addprefix $(OBJDIR)/, $(notdir $(patsubst %.c, %.o, $(MODULES))))
+EXAMPLES_EXE = $(addprefix examples/, $(notdir $(patsubst %.c, %, $(EXAMPLES))))
+
+all: $(LIB_FILE) $(EXAMPLES_EXE)
+
+lib: $(LIB_FILE)
+
+CFLAGS += -Iinclude
+
+clean:
+	rm -f $(DEBUG_OBJDIR)/*.o
+	rm -f $(RELEASE_OBJDIR)/*.o
+	rm -f examples/*.o
+
+veryclean: clean
+	rm -f $(LIB_FILE)
+
+$(OBJDIR)/%.o: src/%.c include/dumbogg.h
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+$(EXAMPLES_EXE): examples/%: examples/%.o $(LIB_FILE)
+	$(CC) $^ -o $@ $(LDFLAGS)
+
+examples/%.o: examples/%.c include/dumbogg.h
+	$(CC) -c $< -o $@ $(CFLAGS)
+
+$(LIB_FILE): $(OBJECTS)
+	ar rs $@ $^
+
+ifdef PREFIX
+
+install: $(LIB_FILE) include/dumbogg.h
+	cp $(LIB_FILE) $(PREFIX)/lib
+	cp include/dumbogg.h $(PREFIX)/include
+
+uninstall:
+	- rm $(PREFIX)/include/dumbogg.h
+	- rm $(PREFIX)/lib/$(notdir $(LIB_FILE))
+else
+
+install:
+	@echo Need to specify PREFIX for this to work, e.g. make install PREFIX=/usr
+uninstall:
+	@echo Need to specify PREFIX for this to work, e.g. make uninstall PREFIX=/usr
+
+endif

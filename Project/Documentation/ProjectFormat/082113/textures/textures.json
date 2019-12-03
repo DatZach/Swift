@@ -1,0 +1,119 @@
+{
+	/*
+	 *	Textures section describes all textures that
+	 *	will be loaded automatically by the engine when it
+	 *	loads.
+	 *	All backgrounds, sprites and tilesets will be lumped
+	 *	into this asset file. How they're used in the code
+	 *	is dependant on the code.
+	 *	Accessing these resources from code can be done through
+	 *	the engine via:
+	 *		Background = Assets.Textures["Background"];
+	 *		Sprite = Assets.Textures["Player"];
+	 */
+	"Textures" :
+	{
+		/*
+		 *	Every resource is given a symbolic name and that is
+		 *	represented in this way.
+		 */
+		"Background" :
+		{
+			/*
+			 *	filename is a relative path to the associated file
+			 *	Supported filetypes (Consult SOIL documentation for more info):
+			 *		PNG, BMP, JPG, TGA, DDS, PSD, HDR
+			 */
+			"filename" : "example.png"
+		},
+		
+		"Player" :
+		{
+			"filename" : "player.png",
+			
+			/*
+			 *	Animated, if this is set to true, the asset compiler
+			 *	will automatically scan the directory for textures with
+			 *	the filename format of "filename.#.ext", where filename
+			 *	and ext are as defined in filename above and # are frame
+			 *	indices starting at 0.
+			 *	E.G. player.0.png, player.1.png, player.2.png
+			 *	Default: false
+			 */
+			"animated" : false,
+			
+			/*
+			 *	origin describes sprite origin when being drawn
+ 			 *	The fields "x" and "y" can be lazily defined.
+			 *	Default: x = 0, y = 0 (top left)
+			 */
+			"origin" :
+			{
+				/*
+				 *	Two styles can be used when describing an origin,
+				 *	the first is as a whole number integer which will be
+				 *	translated as a pixel offset.
+				 *	The second is as a floating pointer number, which
+				 *	will be translated as a percentage.
+				 *	E.G. 0.65 = 65% of the sprite from the top/left.
+				 */
+				"x" : 16,
+				"y" : 16,
+				
+				/* or */
+				"x" : 0.5,
+				"y" : 0.5
+			},
+			
+			/* Should the texture be interpolated. Default = false */
+			"smooth" : false,
+			
+			/*
+			 *	Bounding Box mode will be enabled if this
+			 *	field is defined.
+			 *	The fields "left", "top", "right", "bottom" can be
+			 *	lazily defined.
+			 *	If it is not defined, precise collision mode
+			 *	will be used.
+			 *	Default: Undefined
+			 */
+			"bbox" :
+			{
+				/*
+				 *	Several different ways of defining the bbox are
+				 *	available. The first is with whole integers, this
+				 *	will be translated as pixel offsets (top left).
+				 *	The second method is with floating point numbers,
+				 *	translated as percentages from top left.
+				 */
+				"left"   : 0,
+				"top"    : 0,
+				"right"  : 32,
+				"bottom" : 32,
+				
+				/* or (Example: Full Image) */
+				"left"   : 0.0,
+				"top"    : 0.0,
+				"right"  : 1.0,
+				"bottom" : 1.0
+			},
+			
+			/*
+			 *	Collision Mode can be explicitly declared with this.
+			 *	Valid values:
+			 *		"bbox", "precise", "none"
+			 *	If bbox mode is enabled but no bbox is defined behavior
+			 *	is undefined.
+			 *	Default: "none" unless "bbox" is defined
+			 */
+			"cmode" : "none",
+			
+			/*
+			 *	Lazy defines if the engine should only load textures
+			 *	when needed and not before hand.
+			 *	Default: false
+			 */
+			"lazy" : true
+		}
+	}
+}

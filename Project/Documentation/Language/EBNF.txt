@@ -1,0 +1,43 @@
+<class>						::= ('class' | 'entity' | 'state' | 'global') <ident> [';']
+								(<field> | <method> | <enum> | <const>)*
+
+<field>						::= [<accessor>] <variable>
+<method>					::= [<accessor>] 'method' [<ident>] '(' [<variable>]* [',' <variable>]* ')'
+								'{' <block>* '}'
+<variable>					::= 'var' <ident> ['=' <expression>]
+								[',' <ident> ['=' <expression>]]*  [';']
+<enum>						::= [<accessor>] 'enum' <ident>
+								'{' <ident> ['=' <literal>]* [',' <ident> ['=' <literal>]]* '}' [';']
+<const>						::= [<accessor>] 'const' <ident> '=' <literal> [';']
+
+<block>						::= <block-statement>*
+<block-statement>			::= (('{' (<variable> | <conditional-statement> | <assignment>)* '}') | <variable> | <assignment>)
+
+<conditional-statement>		::= (<return-statement> | <if-statement>)
+
+<if-statement>				::= 'if' '(' <ternary-expression> ')' <block-statement> ['else' <block-statement>]
+<return-statement>			::= 'return' [<ident> | <literal>]
+
+<assignment>				::= [<ident> <assign-op> ]* <ternary-expression>
+<ternary>					::= <logical-or> ['?' <logical-or> ':' <logical-or>]*
+<logical-or>				::= <logical-and> ['||' <logical-and>]*
+<logical-and>				::= <bitwise-or> ['&&' <bitwise-or>]*
+<bitwise-or>				::= <bitwise-xor> ['|' <bitwise-xor>]*
+<bitwise-xor>				::= <bitwise-and> ['^' <bitwise-and>]*
+<bitwise-and>				::= <equality> ['&' <equality>]*
+<equality>					::= <relational> [<equality-op> <relational>]*
+<relational>				::= <shift> [<relational-op> <shift>]*
+<shift>						::= <additive> [<bitwise-shift-op> <additive>]*
+<additive>					::= <multiplicative> [<add-op> <multiplicative>]*
+<multiplicative>			::= <unary> [<mul-op> <unary>]*
+<unary>						::= ([<add-op>] <primary> | '!' <primary> | '~' <primary> | <inc-op> <primary> | cast(<primary>) | <primary>)
+<primary>					::= (<literal> | <reference> | <call> | <list-lookup> | <inc-op> | <new> | (<variable> ('.' <variable>)+))
+
+<accessor>					::= ('public' | 'private' | 'protected')
+<add-op>					::= ('+' | '-')
+<mul-op>					::= ('*' | '/' | '%')
+<assign-op>					::= ('=' | '+=' | '-=' | '*=' | '/=' | '%=' | '|=' | '^=' | '&=' | '<<=' | '>>=')
+<equality-op>				::= ('==' | '!=')
+<relational-op>				::= ('<' | '>' | '<=' | '>=')
+<bitwise-shift-op>			::= ('<<' | '>>')
+<inc-op>					::= ('++' | '--')

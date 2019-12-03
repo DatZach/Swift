@@ -1,0 +1,112 @@
+entity Player
+
+field double X
+field double Y
+field int Z
+field object Sprite
+
+method Create 0
+	push	-1
+	getthis
+	setf	Z
+	new		Sprite
+	getthis
+	setf	Sprite
+	push	"Player"
+	getthis
+	getf	Sprite
+	call	Constructor0
+	
+	getthis
+	typeof
+	print
+end
+
+method Update 0
+	getthis
+	getf	X
+	cast	1
+	getthis
+	getf	Y
+	push	92.0
+	add
+	cast	1
+	getthis
+	call	GetParentState
+	call	TilePlaceFree
+	push	0
+	cmpeq
+	ift		21
+	getthis
+	getf	Y
+	push	3.0
+	add
+	getthis
+	setf	Y
+	ret
+	
+	getthis							// 21
+	call	GetCollidingFirst
+	typeof
+	push	"Coin"
+	cmpeq
+	ift		28
+	jmp		42
+	push	"Oh boy! It works!"
+	print
+	
+	getthis
+	call	GetCollidingFirst
+	getthis
+	call	GetParentState
+	call	Remove
+	
+	new		Sound
+	setv	s
+	push	"Coin"
+	getv	s
+	call	Constructor0
+	getv	s
+	call	Play
+
+	push	263
+	calls	Keyboard_IsDown
+	push	1
+	cmpeq
+	iff		48
+	jmp		54
+	getthis
+	getf	X
+	push	3.0
+	add
+	getthis
+	setf	X
+	
+	push	262
+	calls	Keyboard_IsDown
+	push	1
+	cmpeq
+	iff		60
+	ret
+	getthis
+	getf	X
+	push	3.0
+	sub
+	getthis
+	setf	X
+end
+
+method SceneLoaded 0
+	getthis
+	getf	X
+	push	1.0
+	add
+	getthis
+	setf	X
+	
+	getthis
+	call	GetCollidingFirst
+	push	null
+	cmpneq
+	ift		0
+end

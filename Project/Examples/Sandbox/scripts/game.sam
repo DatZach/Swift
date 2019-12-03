@@ -1,0 +1,26 @@
+state Game
+
+field object ClearColor
+field int Active
+
+method Enter 0
+	push	1
+	getthis
+	setf	Active
+	
+	new		Color
+	getthis
+	setf	ClearColor
+	
+	push	"main"
+	getthis
+	call	LoadScene
+	
+	push	100
+	push	149
+	push	237
+	push	255
+	getthis
+	getf	ClearColor
+	call	ConstructorIIII
+end

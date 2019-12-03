@@ -1,0 +1,7 @@
+Icons
+=====
+
+Author unknown.
+Check before using publically.
+
+Pulled from OpenStudio's repo.

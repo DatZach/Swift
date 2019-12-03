@@ -1,0 +1,21 @@
+entity NPC
+
+field double X
+field double Y
+field int Z
+field object Sprite
+
+method Create 0
+	push	-1
+	getthis
+	setf	Z
+	
+	new		Sprite
+	getthis
+	setf	Sprite
+	
+	push	"NPC"
+	getthis
+	getf	Sprite
+	call	Constructor0
+end

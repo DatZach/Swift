@@ -1,0 +1,48 @@
+@font-face {
+	font-family: Brawler;
+	src: url('Brawler.otf');
+}
+
+body {
+	margin: 0px;
+	font-family: "Ubuntu", "lucida grande", "Source Sans Pro", tahoma, verdana, helvetica, arial, sans-serif;
+	background-color: #FEFEFA;
+}
+
+.nav-container {
+	position: fixed;
+	background-color: #EDF1D9;
+	width: 224px;
+	height: 100%;
+	box-shadow: 1px 0px 7px rgba(99, 99, 99, 0.44);
+}
+
+.nav-body {
+	margin: 5%;
+}
+
+input {
+	font-family: "Ubuntu", "lucida grande", "Source Sans Pro", tahoma, verdana, helvetica, arial, sans-serif;
+	color: #050505;
+	width: 100%;
+}
+
+form {
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.copyright {
+	color: #C4B9B2;
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.copyright > p {
+	position: relative;
+	bottom: 0px;
+	font-size: 11pt;
+}

@@ -1,0 +1,23 @@
+Versioning
+==========
+
+Swift versioning is based around "Semantic Versioning" (http://semver.org/).
+
+Major
+	Incremented when major incompatible changes are made.
+
+Minor
+	Incremented when functionablity is added in a backwards-compatible manner.
+	Incremented when backwards-compatible patches are introduced.
+	Reset whenever Major is incremented.
+
+Build
+	Incremented when every build.
+	Reset whenever Minor is set to 0.
+
+Git Short Tag
+	Git short revision tag.
+	Makes it easier to find issues when the tool is public.
+
+Example
+	1.2.4-ec8e19d

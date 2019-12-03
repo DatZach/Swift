@@ -1,0 +1,32 @@
+Swift Project Structure
+=======================
+
+Revised 08/22/13
+
+New projects can be created from the command line via:
+	swift create ProjectName
+
+or written from scratch, that command will simply make it easier to start by
+creating the initial directory structure and configuration files.
+
+Compiling projects is done from the command line via:
+	swift compile DirectoryName
+	swift compile filename
+
+All asset files are stored in the JSON format for simplicity and extensibility.
+A new, clean project will default to the following directory structure.
+
+/
+	fonts			Directory containing all fonts & fonts.json.
+	scripts			Directory containing all scripts (entities and classes).
+	sounds			Directory containing all sounds & sounds.json.
+	states			Directory containing all states & states.json.
+	textures		Directory containing all textures & textures.json.
+	config.json		Engine/Game configuration.
+	project.json	Project/Compiler configuration.
+
+Configuration files (everything JSON) will be compiled into a large
+asset BLOB containing textures, sounds, fonts, states and engine/game
+configuration. Scripts are compiled into a seperate BLOB and the two
+BLOBs are then merged together as a GameData IFF (GDIFF), this is
+used by the engine to run the game.

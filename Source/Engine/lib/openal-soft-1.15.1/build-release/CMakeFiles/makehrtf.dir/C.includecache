@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/AL/al.h
+
+X:/Swift/Source/Engine/lib/openal-soft-1.15.1/utils/makehrtf.c
+config.h
+X:/Swift/Source/Engine/lib/openal-soft-1.15.1/utils/config.h
+stdio.h
+-
+stdlib.h
+-
+stdarg.h
+-
+string.h
+-
+ctype.h
+-
+math.h
+-
+AL/al.h
+X:/Swift/Source/Engine/lib/openal-soft-1.15.1/utils/AL/al.h
+stdint.h
+-
+
+config.h
+

@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="app.png">resources/icons/application.png</file>
+        <file>resources/icons/shell_osx.png</file>
+        <file>resources/icons/shell_windows.png</file>
+        <file>resources/icons/page_white.png</file>
+        <file>resources/icons/error.png</file>
+        <file>resources/icons/execute.png</file>
+        <file>resources/icons/stop.png</file>
+        <file>resources/icons/warning.png</file>
+        <file>resources/icons/folder.png</file>
+        <file>resources/icons/folder_open.png</file>
+        <file>resources/icons/save.png</file>
+        <file>resources/icons/save_all.png</file>
+        <file>resources/icons/save_as.png</file>
+        <file>resources/icons/script.png</file>
+        <file>resources/icons/script_add.png</file>
+        <file>resources/icons/script_code.png</file>
+        <file>resources/icons/preferences.png</file>
+    </qresource>
+</RCC>

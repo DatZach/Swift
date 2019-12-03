@@ -1,0 +1,69 @@
+Virtual Machine ByteCode
+========================
+
+	This document outlines the opcode set that the virtual machine (VM) uses to operate.
+
+Version History
+---------------
+
+Version 1 [October 18th, 2013]:
+	- Initial release
+
+Operation Codes (Opcodes)
+-------------------------
+
+Opcodes are a byte in size, operades will follow the opcode depending on the opcode.
+Value is represented in HEX.
+
+Value	Opcode						Operands
+----------------------------------------------------------------------------------------	
+00		Nop							-
+02		Push						VALUE
+03		Pop							-
+04		Swap						-
+05		Duplicate					-
+10		SetVariable					VAR_NAME
+11		GetVariable					VAR_NAME
+12		SetArrayVariable			VAR_NAME
+13		GetArrayVariable			VAR_NAME
+14		GetVariableLength			VAR_NAME
+15		GetArgument					?
+16		GetThis						-
+17		GetBase						-
+18		GetBaseOf					-
+20		Add							-
+21		Subtract					-
+22		Multiply					-
+23		Divide						-
+24		Modulo						-
+30		LogicalNegate				-
+31		BitwiseNegate				-
+32		BitwiseNot					-
+33		BitwiseAnd					-
+34		BitwiseOr					-
+35		BitwiseXor					-
+35		BitwiseShiftLeft			-
+36		BitwiseShiftRight			-
+40		IncrementVariable			VAR_NAME VALUE
+41		IncrementField				VAR_NAME VALUE
+50		CompareEqual				-
+51		CompareNotEqual				-
+52		CompareGreaterThan			-
+53		CompareLesserThan			-
+54		CompareGreaterThanOrEqual	-
+55		CompareLesserThanOrEqual	-
+56		IfTrue						ADDRESS
+57		IfFalse						ADDRESS
+58		Jump						ADDRESS
+59		Return						-
+60		ClassSetFieldStatic			CLASS_NAME + FIELD_NAME
+61		ClassGetFieldStatic			CLASS_NAME + FIELD_NAME ' '
+62		ClassSetField				FIELD_NAME
+63		ClassGetField				FIELD_NAME
+64		ClassCall					METHOD_NAME
+65		ClassCallStatic				CLASS_NAME + METHOD_NAME
+66		ClassCallVirtual			-
+70		New							CLASS_NAME
+80		CastVariant					TYPE (Enum)
+F0		Print						-
+F1		Breakpoint					-

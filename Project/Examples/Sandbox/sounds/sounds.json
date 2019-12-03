@@ -1,0 +1,10 @@
+{
+	"Sounds" :
+	{
+		"Coin" :
+		{
+			"filename" : "coin.wav",
+			"mode" : "file"
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	/* This is the target executable's name */
+	"Target" : "Project",
+	
+	/*
+	 *	This lists all directories and files that contain assets.
+	 *	If a directory is listed, a .json file of the same name
+	 *	as the directory will be searched for inside of the
+	 *	directory.
+	 *	If a filename is specified that will be loaded instead.
+	 */
+	"Assets" :
+	[
+		"textures",
+		"sounds",
+		"fonts",
+		"states",
+		"config.json"
+	],
+	
+	/*
+	 *	Follows same rules as described above.
+	 */
+	"Sources" :
+	[
+		"scripts"
+	],
+	
+	/*
+	 *	All other fields ignored by compiler.
+	 *	Allowing for this file to also be used by the IDE as
+	 *	a project file.
+	 */
+}

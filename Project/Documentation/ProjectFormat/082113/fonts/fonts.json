@@ -1,0 +1,114 @@
+{
+	/*
+	 *	Fonts section describes all fonts that will be
+	 *	automatically loaded by the engine during load time.
+	 *	Fonts can be accessed like so:
+	 *		var text = Text("Hello, World!")
+	 *		{
+	 *			X = 16,
+	 *			Y = 16,
+	 *			Font = Assets.Fonts["@Arial"] // or
+	 *			Font = Assets.Fonts["Example"]
+	 *		};
+	 *	Fonts referenced with a @ before the name will be loaded
+	 *	from the Operating System's font store. Otherwise they
+	 *	will be loaded from the resource data. This allows for
+	 *	developers to design faster by not needing to define a
+	 *	font in the assets and by cutting back on the compiled
+	 *	game size. However for cross-platform support precompiled
+	 *	fonts are recommended.
+	 *	Note that all attributes related to fonts are changable in
+	 *	code, anything defined in these sections only serves as a
+	 *	default.
+	 */
+	"Fonts" :
+	{
+		"Example" :
+		{
+			/*
+			 *	Font Face can either be a filename relative to
+			 *	the associated file, or a font's symbolic name as
+			 *	defined by the Operating System.
+			 *	Supported Font Filetypes:
+			 *		TTF, TTC, PFA, PFB, CFF, OTF, X11 PCF, FNT, BDF, PFR
+			 *	Default: @Arial
+			 */
+			"fontface" : "arial.ttf",
+			
+			/*
+			 *	Anti Aliasing can be defined for fonts.
+			 *	Default: true
+			 */
+			"aa" : true,
+			
+			/*
+			 *	Size in pts.
+			 *	Default: 10
+			 */
+			"size" : 10,
+			
+			/* Bold. Default = false */
+			"bold" : false,
+			
+			/* Italic. Default = false */
+			"italic" : false,
+			
+			/* Underline. Default = false */
+			"underline" : false,
+			
+			/* Overline. Default = false */
+			"overline" : false,
+			
+			/* Strike Through. Default = false */
+			"strikethrough" : false,
+			
+			/*
+			 *	Outline defined if this field is present.
+			 */
+			"outline" :
+			{
+				/*
+				 *	Color defined as RGBA.
+				 *	Default: 0x000000FF
+				 */
+				"color" : 0x000000FF,
+				
+				/*
+				 *	Thickness defined as the stroke size.
+				 *	Default: 1
+				 */
+				"thickness" : 1
+			},
+			
+			/*
+			 *	Dropshadow defined if this field is present.
+			 */
+			"dropshadow" :
+			{
+				/*
+				 *	Offset translated as pixels. Only signed integers.
+				 *	Default: x = 0, y = 0
+				 */
+				"offset" :
+				{
+					"x" : 1,
+					"y" : 1
+				},
+				
+				/*
+				 *	Spread translated as radius in pixels.
+				 *	Only unsigned integers.
+				 *	Default: 3
+				 */
+				"spread" : 3,
+				
+				/*
+				 *	Color defined as drop shadow color.
+				 *	Translated as RGBA.
+				 *	Default: 0x000000FF
+				 */
+				"color" : 0x000000FF
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+Platformer Example
+==================
+
+Main Menu
+---------
+
+	Title Graphic
+	Start button
+
+Game
+----
+	Single level
+		Coins
+		End Game NPC
+		Platforms
+	End Game NPC
+		After X coins are collected players talk
+		to this NPC and he'll end the demo.

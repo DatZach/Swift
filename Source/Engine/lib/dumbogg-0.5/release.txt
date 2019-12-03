@@ -1,0 +1,23 @@
+DUMBOGG - Release notes.
+
+
+********************************************
+*** Version 0.5, released 16 August 2002 ***
+********************************************
+
+This is the first release. It is compatible with DUMB v0.8 and DUMB v0.8.1.
+However, it uses undocumented parts of DUMB's API; it may not be compatible
+with future versions. Chances are DUMBOGG and DUMB will be upgraded at the
+same time, so if you download both you'll be OK.
+
+There's just one point of note in this release. When you call al_start_duh(),
+it is your responsibility to pass the correct sampling frequency (you must
+pass the same frequency the OGG was encoded at). If you do not, you will
+succeed in changing the pitch and speed of the playback, BUT it will not be
+the same in future releases. In future releases, resampling will take place
+in order to keep the OGG playing at the right pitch. (There will be other
+methods for making the OGG play at a different pitch.) So, if you pass a
+different frequency, be prepared for your program not to work as you'd like
+in future releases.
+
+That's it! Enjoy :)

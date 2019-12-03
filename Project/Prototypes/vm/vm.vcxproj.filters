@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="vm.cpp" />
+    <ClCompile Include="variant.cpp" />
+    <ClCompile Include="class.cpp" />
+    <ClCompile Include="instruction.cpp" />
+    <ClCompile Include="method.cpp" />
+    <ClCompile Include="field.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{82f9576f-fe2d-4d4a-a173-e4befdd695b1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\vm.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\variant.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\instruction.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\class.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stack.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\method.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\field.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\variant.inl">
+      <Filter>include</Filter>
+    </None>
+  </ItemGroup>
+</Project>
